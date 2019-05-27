@@ -1,0 +1,28 @@
+{
+  "name": "population-management-system",
+  "version": "1.0.0",
+  "description": "Manage population in a location",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14",
+    "morgan": "^1.9.1",
+    "swagger-ui-express": "^4.0.2",
+    "nodemon": "^1.18.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EleisonC/population-management-system.git"
+  },
+  "author": "Christopher Kalule",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EleisonC/population-management-system/issues"
+  },
+  "homepage": "https://github.com/EleisonC/population-management-system#readme"
+}
