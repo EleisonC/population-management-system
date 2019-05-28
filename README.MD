@@ -1,7 +1,7 @@
 # population-management-system
 
 [![Build Status](https://travis-ci.org/EleisonC/population-management-system.svg?branch=Develop)](https://travis-ci.org/EleisonC/population-management-system)
-[![Coverage Status](https://coveralls.io/repos/github/EleisonC/population-management-system/badge.svg?branch=master)](https://coveralls.io/github/EleisonC/population-management-system?branch=Develop)
+[![Coverage Status](https://coveralls.io/repos/github/EleisonC/population-management-system/badge.svg?branch=master)](https://coveralls.io/github/EleisonC/population-management-system?branch=master)
 
 ## Table of Contents
 
