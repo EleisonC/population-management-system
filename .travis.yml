@@ -1,0 +1,18 @@
+node_js: 11
+services: mongodb
+env:
+  global:
+    - TEST_DATABASE_URL="mongodb+srv://chris:r5-GRrS8UsuC_uw@ka7u73-23xdq.mongodb.net/population-management?retryWrites=true"
+
+cache: npm
+
+before_script:
+  - sleep 15
+
+script:
+  - npm install
+  - npm install jest
+  - npm test
+
+after_success:
+  - coveralls < coverage/lcov.info

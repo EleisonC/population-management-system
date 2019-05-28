@@ -4,7 +4,8 @@
   "description": "Manage population in a location",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon",
+    "test": "jest  --coverage  --forceExit"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -13,11 +14,20 @@
     "mongoose": "^5.4.14",
     "morgan": "^1.9.1",
     "swagger-ui-express": "^4.0.2",
-    "nodemon": "^1.18.10"
+    "jest": "^24.1.0",
+    "mocha": "^6.0.1",
+    "nodemon": "^1.18.10",
+    "supertest": "^3.4.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EleisonC/population-management-system.git"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "mocha": "^6.0.1",
+    "nodemon": "^1.18.10",
+    "supertest": "^3.4.2"
   },
   "author": "Christopher Kalule",
   "license": "ISC",
