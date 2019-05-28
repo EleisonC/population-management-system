@@ -4,7 +4,7 @@
   "description": "Manage population in a location",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest  --coverage  --forceExit --setupFiles dotenv/config"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -18,6 +18,12 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EleisonC/population-management-system.git"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "mocha": "^6.0.1",
+    "nodemon": "^1.18.10",
+    "supertest": "^3.4.2"
   },
   "author": "Christopher Kalule",
   "license": "ISC",

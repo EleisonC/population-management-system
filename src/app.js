@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose');
+const locationRouter = require('./routers/locationRoutes');
 const {PORT,MLAB_URI} = process.env
 const bodyParser = require('body-parser');
 const morgan = require('morgan')
@@ -10,6 +11,7 @@ const db = mongoose.connect(MLAB_URI, { useNewUrlParser: true });
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 
+app.use('/api/locations', locationRouter)
 
 app.listen(4000, () => {
   console.log('Application running on port 4000...')
