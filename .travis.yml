@@ -9,7 +9,7 @@ cache: yarn
 before_script:
   - sleep 15
 
-script: yarn test --coverage
+script: jest  --coverage  --forceExit --setupFiles dotenv/config
 
 after_success:
   - coveralls < coverage/lcov.info
