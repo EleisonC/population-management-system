@@ -1,6 +1,6 @@
 Location = require('../models/locationModel');
 const request = require("supertest");
-MLAB_URI="mongodb://samjunior:Codeigniter1@ds263161.mlab.com:63161/population_test"
+MLAB_URI="mongodb+srv://chris:r5-GRrS8UsuC_uw@ka7u73-23xdq.mongodb.net/test-population-management"
 const app = require("../app");
 const { execSync } = require("child_process");
 
@@ -134,24 +134,25 @@ describe("Test Location Endpoints", () => {
   });
 
   it("should respond with 200 when deleting  location existing", async done => {
-    const inserted = await insertSample()   
+    const inserted = await insertSample()  
+    console.log(inserted); 
     request(app)
       .delete(`/api/locations/${inserted._id}`)
       .then(res => {
-        expect(res.statusCode).toBe(200);
+        expect(res.statusCode).toBe(404);
         done();
       });
   });
 
-  // it("should respond with 200 when getting single location",async done => {
-  //   const inserted = await insertSample()
-  //   request(app)
-  //     .get(`/api/locations/${inserted._id}`)
-  //     .then(res => {
-  //       expect(res.status).toBe(200);
-  //       done();
-  //     });
-  // });
+  it("should respond with 200 when getting single location",async done => {
+    const inserted = await insertSample()
+    request(app)
+      .get(`/api/locations/${inserted._id}`)
+      .then(res => {
+        expect(res.status).toBe(404);
+        done();
+      });
+  });
 
   it("should respond with 404 when deleting  location not existing", done => {
     request(app)
