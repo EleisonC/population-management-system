@@ -4,6 +4,7 @@
   "description": "Manage population in a location",
   "main": "src/app.js",
   "scripts": {
+    "start": "nodemon",
     "test": "jest  --coverage  --forceExit --setupFiles dotenv/config"
   },
   "dependencies": {

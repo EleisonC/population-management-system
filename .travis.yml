@@ -4,12 +4,13 @@ env:
   global:
     - TEST_DATABASE_URL="mongodb+srv://chris:r5-GRrS8UsuC_uw@ka7u73-23xdq.mongodb.net/population-management?retryWrites=true"
 
-cache: yarn
+cache: npm
 
 before_script:
   - sleep 15
 
-script: jest  --coverage  --forceExit --setupFiles dotenv/config
+script: 
+  - jest  --coverage  --forceExit --setupFiles dotenv/config
 
 after_success:
   - coveralls < coverage/lcov.info
