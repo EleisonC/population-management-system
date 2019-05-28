@@ -139,7 +139,7 @@ describe("Test Location Endpoints", () => {
     request(app)
       .delete(`/api/locations/${inserted._id}`)
       .then(res => {
-        expect(res.statusCode).toBe(404);
+        expect(res.statusCode).toBe(200);
         done();
       });
   });
@@ -149,7 +149,7 @@ describe("Test Location Endpoints", () => {
     request(app)
       .get(`/api/locations/${inserted._id}`)
       .then(res => {
-        expect(res.status).toBe(404);
+        expect(res.status).toBe(200);
         done();
       });
   });
