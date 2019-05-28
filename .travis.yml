@@ -10,7 +10,7 @@ before_script:
   - sleep 15
 
 script: 
-  - jest  --coverage  --forceExit --setupFiles dotenv/config
+  - npm test
 
 after_success:
   - coveralls < coverage/lcov.info
