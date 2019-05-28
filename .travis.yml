@@ -9,7 +9,8 @@ cache: npm
 before_script:
   - sleep 15
 
-script: 
+script:
+  - npm install
   - npm install jest
   - npm test
 
